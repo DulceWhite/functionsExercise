@@ -32,6 +32,8 @@ function kermit(){
 }
 kermit();
 
+
+
 fence(5);
 //5
 function muppetShowSeasons(seasons){
@@ -136,6 +138,12 @@ fence(`Bonus 12.1`)
  randomMuppet(charactersTwo[Math.floor(Math.random()*charactersTwo.length)]);
  
 
+ //better
+
+//  randomMuppet = characters => {
+//      console.log(``);
+//  }
+
 
 
 fence(`Bonus 13`);
@@ -147,8 +155,8 @@ fence(`Bonus 13`);
 
 // console.log(caps);
  
-const code = [`hello world`];
-console.log(code.indexOf(`hello world`));
+// const code = [`hello world`];
+// console.log(code.indexOf(`hello world`));
 
 // for (i=0; i<code.length; i++){
 //     console.log();
@@ -173,8 +181,61 @@ console.log(code.indexOf(`hello world`));
 // }
 // }
 
-String str = `hello world`;
 
-char[] word;
+//13
 
-char[] myAplicatonN
+// caps = string => {
+//     let chars = string.toLowerCase().split(``);
+//     for(i=0; i< chars.length; i+=2){
+//         chars[i] = chars[i].toUpperCase();
+//     }
+//     console.log(chars.join(``));
+// }
+
+// caps(`Hello World`);
+
+//or
+
+// caps = string => {
+//     return string.split(``).map((v, i)>= i% 2 ? v.toLowerCase(): v.toUpperCase()).join(``);
+// }
+
+// console.log(caps(`Hello World`));
+
+//or
+
+// caps = string => {
+//     let newString = ``;
+//     for (i=0; i< string.length; i++){
+//         if (i% 2 === 0){
+//             newString += string[i].toUpperCase();
+
+//         }else{
+//             newString += string[i].toLowerCase();
+//         }
+//     }
+//     return newString;
+// }
+
+// console.log(caps(`Hello World`));
+
+//13 extra extra
+
+caps = string => {
+    let count = 0;
+    let newString = ``;
+    for(i=0; i < string.length; i++){
+        if (string[i] === ` `){
+            newString += ` `;
+        }else if (count % 2 === 0){
+            newString += string[i].toUpperCase();
+            count++;
+        }else{
+            newString += string[i].toLowerCase();
+            count++;
+        }
+    }
+    return newString;
+}
+
+console.log(caps(`Hello World`));
