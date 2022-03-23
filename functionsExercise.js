@@ -126,23 +126,25 @@ fence(`Bonus 12.1`)
 //Bonus 12c
 
 
- randomMuppet= characters =>{
+//  randomMuppet= characters =>{
 
-  characters[Math.floor(Math.random()*characters.length)]; 
- console.log(characters);
- }
+//   characters[Math.floor(Math.random()*characters.length)]; 
+//  console.log(characters);
+//  }
 
 
- randomMuppet(charactersOne[Math.floor(Math.random()*charactersOne.length)]);
+//  randomMuppet(charactersOne[Math.floor(Math.random()*charactersOne.length)]);
 
- randomMuppet(charactersTwo[Math.floor(Math.random()*charactersTwo.length)]);
+//  randomMuppet(charactersTwo[Math.floor(Math.random()*charactersTwo.length)]);
  
 
  //better
 
-//  randomMuppet = characters => {
-//      console.log(``);
-//  }
+ randomMuppet =  (characters) => {
+    console.log(`${characters[Math.floor(Math.random() * characters.length)]}`);
+}
+
+randomMuppet(charactersOne);
 
 
 
